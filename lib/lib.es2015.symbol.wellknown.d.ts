@@ -257,7 +257,7 @@ interface String {
      * @param splitter An object that can split a string.
      * @param limit A value used to limit the number of elements returned in the array.
      */
-    split(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[];
+    split(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): [string, ...Array<string | undefined>];
 }
 
 interface ArrayBuffer {
